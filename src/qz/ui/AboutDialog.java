@@ -95,13 +95,13 @@ public class AboutDialog extends BasicDialog {
             for (ConnectionFactory f : c.getConnectionFactories()) {
                 ServerConnector s = (ServerConnector)c;
                 if (f instanceof SslConnectionFactory) {
-                    wssLabel.setText("wss://localhost:" + s.getLocalPort());
+                    wssLabel.setText("wss://" + s.getHost() + ":" + s.getLocalPort());
                     wssLabel.setFont(wsLabel.getFont());
                     wssLabel.setForeground(wsLabel.getForeground());
                     break;
                 }
                 else {
-                    wsLabel.setText("ws://localhost:" + s.getLocalPort());
+                    wsLabel.setText("ws://" + s.getHost() + ":" + s.getLocalPort());
                     break;
                 }
             }
