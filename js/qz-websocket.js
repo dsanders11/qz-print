@@ -15,12 +15,12 @@ var qzConfig = {
         closePort:       'qzDoneClosingPort',
         findNetworkInfo: 'qzDoneFindingNetwork'
     },
-    protocol: ["wss://", "ws://"],   // Protocols to use, will try secure WS before insecure
-    uri: "10.1.10.213",              // Base URL to server
-    ports: [8181, 8282, 8383, 8484], // Ports to try, insecure WS uses port (ports[x] + 1)
-    protocolIndex: 0,                // Used to track which value in 'protocol' array is being used
-    portIndex: 0,                    // Used to track which value in 'ports' array is being used
-    keepAlive: (60 * 1000)           // Interval in millis to send pings to server
+    protocol: ["wss://", "ws://"],                  // Protocols to use, will try secure WS before insecure
+    uri: "warehouse.headshop.grasshoppervape.com",  // Base URL to server
+    ports: [8181, 8282, 8383, 8484],                // Ports to try, insecure WS uses port (ports[x] + 1)
+    protocolIndex: 0,                               // Used to track which value in 'protocol' array is being used
+    portIndex: 0,                                   // Used to track which value in 'ports' array is being used
+    keepAlive: (60 * 1000)                          // Interval in millis to send pings to server
 };
 
 
