@@ -275,7 +275,7 @@ public class PrintRaw {
         printJob.print(doc, reqAttr.get());
 
         while (!isFinished.get()) {
-            Thread.sleep(100);
+            Thread.sleep(10);
         }
 
         log.info("Print job received by printer: \"" + printServiceAtomicReference.get().getName() + "\"");

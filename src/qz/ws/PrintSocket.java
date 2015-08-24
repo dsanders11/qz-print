@@ -174,7 +174,7 @@ public class PrintSocket {
 
             //Dialog blocks UI, so each request should wait until no longer blocked
             while(isAsking.get()) {
-                try { Thread.sleep(1000); }catch(Exception ignore) {}
+                try { Thread.sleep(500); }catch(Exception ignore) {}
             }
 
             isAsking.set(true);

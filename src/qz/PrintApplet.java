@@ -112,7 +112,7 @@ public class PrintApplet extends PrintFunction implements Runnable {
         notifyBrowser("qzReady");
         while (running) {
             try {
-                Thread.sleep(sleep);  // Wait 100 milli before running again
+                Thread.sleep(sleep);  // Wait 10 milli before running again
                 if (startAppending) {
                     try {
                         switch (appendType) {
@@ -261,7 +261,7 @@ public class PrintApplet extends PrintFunction implements Runnable {
         startSending = false;
         startFindingNetwork = false;
         startAppending = false;
-        sleep = getParameter("sleep", 100);
+        sleep = getParameter("sleep", 10);
         appendType = 0;
         allowMultiple = false;
         String printer = getParameter("printer", null);
