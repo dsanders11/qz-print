@@ -92,6 +92,7 @@ public class TrayManager {
 
         // Setup the web socket log file writer
         trayLogger = Logger.getLogger(TrayManager.class.getName());
+        trayLogger.setLevel(Level.SEVERE);
         addLogHandler(trayLogger);
 
         // Setup the shortcut name so that the UI components can use it
