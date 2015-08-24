@@ -88,7 +88,6 @@ public class PrintSocket {
     @OnWebSocketConnect
     public void onConnect(Session session) {
         log.info("Server connect: " + session.getRemoteAddress());
-        trayManager.displayInfoMessage("Client connected");
     }
 
     @OnWebSocketClose
@@ -104,7 +103,6 @@ public class PrintSocket {
         }
 
         log.info("WebSocket close: " + statusCode + " - " + reason);
-        trayManager.displayInfoMessage("Client disconnected");
     }
 
     @OnWebSocketError
